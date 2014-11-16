@@ -12,19 +12,7 @@ First we read in the data.
 library(ggplot2)
 PATH <- "~/Documents/Code/R/reproducibleresearch/project1/RepData_PeerAssessment1/"
 setwd(PATH)
-activity <- read.csv("activity.csv", stringsAsFactors = F)
-```
-
-```
-## Warning in file(file, "rt"): cannot open file 'activity.csv': No such file
-## or directory
-```
-
-```
-## Error in file(file, "rt"): cannot open the connection
-```
-
-```r
+activity <- read.csv(unz("activity.zip", "activity.csv"), stringsAsFactors = F)
 summary(activity)
 ```
 
